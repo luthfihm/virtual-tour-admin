@@ -1,0 +1,47 @@
+<template name="addObject">
+    <form>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <div class="row">
+                    <div class="col m5">
+                        <div class="col s12">
+                            <a href="#">
+                                <img src="images/dummy.png" class="responsive-img" alt="">
+                            </a>
+                        </div>
+                        <div class="input-field col s12">
+                            <input placeholder="Lokasi" id="location" type="text" class="validate">
+                            <label for="location">Lokasi</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="Latitude" id="lat" type="text" class="validate">
+                            <label for="lat">Latitude</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="Longitude" id="long" type="text" class="validate">
+                            <label for="long">Longitude</label>
+                        </div>
+                    </div>
+                    <div class="col m7">
+                        <div class="input-field col s12">
+                            <input placeholder="Title" id="title" type="text" class="validate">
+                            <label for="title">Title</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input placeholder="Video URL" id="video" type="text" class="validate">
+                            <label for="video">Video URL</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="description" class="materialize-textarea"></textarea>
+                            <label for="description">Deskripsi</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
+    </form>
+</template>

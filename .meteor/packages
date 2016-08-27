@@ -24,3 +24,4 @@ iron:router
 materialize:materialize@=0.97.6
 http
 session
+mrt:fancybox

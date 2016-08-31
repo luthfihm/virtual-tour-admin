@@ -1,47 +1,50 @@
 <template name="addObject">
     <form>
-        <div id="modal1" class="modal">
+        <div id="modal1" class="modal modal-fixed-footer">
             <div class="modal-content">
-                <h4>Modal Header</h4>
+                <h4>{{title}}</h4>
                 <div class="row">
                     <div class="col m5">
                         <div class="col s12">
                             <a href="http://wono.akhfa.me/filemanager/dialog.php?type=1&crossdomain=1" class="iframe-btn">
-                                <img src="images/dummy.png" class="responsive-img" alt="">
+                                <img src="{{imageUrl}}" id="imageThumb" class="responsive-img" alt="">
                             </a>
-                            <input type="text" id="image_url">
                         </div>
                         <div class="input-field col s12">
-                            <input placeholder="Lokasi" id="location" type="text" class="validate">
+                            <input placeholder="Image URL" id="imageUrl" type="text" class="validate" value="{{object.imageUrl}}">
+                            <label for="imageUrl">Image URL</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input placeholder="Lokasi" id="location" type="text" class="validate" value="{{object.location}}">
                             <label for="location">Lokasi</label>
                         </div>
                         <div class="input-field col s6">
-                            <input placeholder="Latitude" id="lat" type="text" class="validate">
+                            <input placeholder="Latitude" id="lat" type="text" class="validate" value="{{object.geoLocation.lat}}">
                             <label for="lat">Latitude</label>
                         </div>
                         <div class="input-field col s6">
-                            <input placeholder="Longitude" id="long" type="text" class="validate">
+                            <input placeholder="Longitude" id="lng" type="text" class="validate" value="{{object.geoLocation.lng}}">
                             <label for="long">Longitude</label>
                         </div>
                     </div>
                     <div class="col m7">
                         <div class="input-field col s12">
-                            <input placeholder="Title" id="title" type="text" class="validate">
+                            <input placeholder="Title" id="title" type="text" class="validate" value="{{object.title}}">
                             <label for="title">Title</label>
                         </div>
                         <div class="input-field col s12">
-                            <input placeholder="Video URL" id="video" type="text" class="validate">
-                            <label for="video">Video URL</label>
+                            <input placeholder="Video URL" id="videoUrl" type="text" class="validate" value="{{object.videoUrl}}">
+                            <label for="videoUrl">Video URL</label>
                         </div>
                         <div class="input-field col s12">
-                            <textarea id="description" class="materialize-textarea"></textarea>
+                            <textarea id="description" class="materialize-textarea" value="{{object.description}}"></textarea>
                             <label for="description">Deskripsi</label>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                <button type="submit" class="modal-action modal-close waves-effect waves-green btn"><i class="material-icons left">save</i>Simpan</button>
             </div>
         </div>
     </form>

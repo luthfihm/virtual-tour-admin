@@ -12,6 +12,26 @@ if (Meteor.isServer) {
             this.unblock();
             var response = ApiClient.get(apiUrl);
             return response;
+        },
+        'objects.get' (id) {
+            this.unblock();
+            var response = ApiClient.get(apiUrl + '/' + id);
+            return response;
+        },
+        'objects.add' (object) {
+            this.unblock();
+            var response = ApiClient.post(apiUrl, object);
+            return response;
+        },
+        'objects.edit' (id, object) {
+            this.unblock();
+            var response = ApiClient.put(apiUrl + '/' + id, object);
+            return response;
+        },
+        'objects.delete' (id) {
+            this.unblock();
+            var response = ApiClient.delete(apiUrl + '/' + id);
+            return response;
         }
     });
 }

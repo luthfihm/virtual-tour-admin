@@ -13,6 +13,18 @@ Router.route('/', function() {
     });
 });
 
+Router.route('/users', function() {
+    this.layout('layout');
+    this.render('manageUser');
+    this.onBeforeAction(function () {
+        if (getCookie('token') != '') {
+            this.next();
+        } else {
+            window.location = '/login';
+        }
+    });
+});
+
 Router.route('/login', {
     template: 'login',
     title: 'Login | Virtual Tour Management',
